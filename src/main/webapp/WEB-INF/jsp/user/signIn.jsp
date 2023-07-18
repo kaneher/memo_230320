@@ -52,7 +52,7 @@ $(document).ready(function() {
 		let params = $(this).serialize(); // name 속성 반드시 있어야함
 		console.log(params);
 		
-		$.post(url, params); // request
+		$.post(url, params) // request
 		.done(function(data) { // response
 			if (data.code == 1) {
 				// 성공
