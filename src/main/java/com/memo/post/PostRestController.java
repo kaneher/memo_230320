@@ -30,9 +30,10 @@ public class PostRestController {
 		
 		// 세션에서 유저 정보 받아오기
 		int userId = (int)session.getAttribute("userId");
+		String userLoginId = (String)session.getAttribute("userLoginId");
 		
 		// DB insert
-		
+		postBO.addPost(userId, userLoginId, subject, content, file);
 		
 		Map<String, Object> result = new HashMap<>();
 		result.put("code", 1);
